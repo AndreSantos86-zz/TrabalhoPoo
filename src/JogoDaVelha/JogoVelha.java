@@ -1,7 +1,7 @@
 package JogoDaVelha;
 
 // Jogo da Velha.
-// Aluno: Andre Luis Santos RU:3312505.
+
 
 import java.util.Scanner;
 
@@ -26,7 +26,7 @@ public class JogoVelha {
 		
 			
 		if(opcao==1) { 
-				comp= new ComputadorA();// apos escolher a opÁ„o sera instanciado o computador.
+				comp= new ComputadorA();// apos escolher a op√ß√£o sera instanciado o computador.
 		}
 		else if(opcao ==2) {
 				comp= new ComputadorB();
@@ -42,14 +42,14 @@ public class JogoVelha {
 		int vez=1; // para alterar a vez dos jogadors ,enquanto vale 1 jogador humano enquanto 2 computador.
 		
 		
-		while(joga.Situacao(Jogadas).equals("null") ) {// Enquanto ainda tiver jogadas ou n„o tiver vencedor fica dentro desse laÁo de repetiÁ„o  
+		while(joga.Situacao(Jogadas).equals("null") ) {// Enquanto ainda tiver jogadas ou n√£o tiver vencedor fica dentro desse la√ßo de repeti√ß√£o  
 			joga.tabela();	// Mostrar a tabela para jogar	
 			if(vez==1) { //Jogador Humano
-				pos = jogador.jogador();// recebe a posiÁ„o da jogada escolhida pelo jogador humano
+				pos = jogador.jogador();// recebe a posi√ß√£o da jogada escolhida pelo jogador humano
 				
-				while(!joga.VerificaPos(pos)) { // esse laÁo verifica se a posiÁ„o escolhida ja esta preenchida.
+				while(!joga.VerificaPos(pos)) { // esse la√ßo verifica se a posi√ß√£o escolhida ja esta preenchida.
 					System.out.println(" jogada invalida ");// 
-					System.out.println("Digite outra posiÁ„o :");
+					System.out.println("Digite outra posi√ß√£o :");
 					pos = jogador.jogador();
 				}
 	
@@ -58,13 +58,13 @@ public class JogoVelha {
 				Jogadas++; //( para contar as vezes que foram jogadas por exemplo 
 				vez=2;    // passa a vez para o Computador
 			}
-			//----- Jogada do Computador, repetido os laÁos de verificaÁ„o de opc„o de jogada igual as do jogador.
+			//----- Jogada do Computador, repetido os la√ßos de verifica√ß√£o de opc√£o de jogada igual as do jogador.
 			else if(vez==2) {
 				pos = comp.Computadores(); // recebe o valor de um dos computadores escolhidos no inicio do jogo,
 				
 				while(!joga.VerificaPos(pos)) { // apos o computador escolher, o numero tambem e verificado.
 					System.out.println(" jogada invalida ");// 
-					System.out.println("Digite outra posiÁ„o");
+					System.out.println("Digite outra posi√ß√£o");
 					pos = comp.Computadores();
 				}
 				
